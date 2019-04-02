@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TfLData
+namespace SpecificationTest
 {
     public class Class1
     {
