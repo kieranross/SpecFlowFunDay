@@ -19,14 +19,13 @@ namespace TfLData
             this.apiUrl = apiUrl;
         }
 
-        public async Task<string> Get()
+        public async Task<HttpResponseMessage> Get()
         {
             var builder = new UriBuilder(apiUrl)
             {
                 Query = $"app_id={appId}&app_key={appKey}"
             };
-            var response = await client.GetAsync(builder.Uri);
-            return await response.Content.ReadAsStringAsync();
+            return await client.GetAsync(builder.Uri);
         }
     }
 }
